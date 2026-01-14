@@ -28,10 +28,10 @@ export default function Header() {
           {/* Logo - Always here */}
           <div className="flex items-center">
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="INWOOD"
-              width={140}
-              height={40}
+              width={144}
+              height={36}
               className="h-10 w-auto object-contain"
             />
           </div>
@@ -80,10 +80,10 @@ export default function Header() {
           <div className="flex items-center justify-between mb-8">
              <div className="flex items-center">
                 <Image
-                  src="/logo.png"
+                  src="/logo.svg"
                   alt="INWOOD"
-                  width={140}
-                  height={40}
+                  width={144}
+                  height={36}
                   className="h-10 w-auto object-contain"
                 />
              </div>
