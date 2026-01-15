@@ -1,15 +1,14 @@
 import React from 'react';
-import { Search, ArrowRight } from 'lucide-react';
+import { Search, ArrowRight, ArrowUp, ArrowDown } from 'lucide-react';
 
 const categories = [
-  "New Arrivals",
-  "Accessories",
-  "Bags",
-  "Clothing",
-  "Shoes",
-  "Jewelry",
-  "Home Decor",
-  "Beauty"
+  "Bedroom",
+  "Dining Room",
+  "Meeting Room",
+  "Workspace",
+  "Living Room",
+  "Kitchen",
+  "Living Space"
 ];
 
 const gridItems = [
@@ -35,22 +34,44 @@ export default function CategorySection() {
              <span className="text-[#6E757E] text-xl font-medium">Search</span>
           </div>
 
-          {/* Categories List */}
-          <div className="flex flex-col gap-8 pl-4">
-            {categories.map((cat, index) => (
-              <a
-                key={index}
-                href="#"
-                className={`text-[#07484A] text-2xl font-normal hover:font-bold transition-all ${cat === 'New Arrivals' ? 'font-bold' : ''}`}
-              >
-                {cat}
-              </a>
-            ))}
+          {/* Categories List & Scroll */}
+          <div className="flex flex-row justify-between relative h-[450px]">
+            <div className="flex flex-col gap-8 pl-4">
+              {categories.map((cat, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className={`text-[#07484A] text-2xl font-normal hover:font-bold transition-all ${cat === 'Bedroom' ? 'font-bold' : ''}`}
+                >
+                  {cat}
+                </a>
+              ))}
+            </div>
+
+            {/* Custom Scroll Indicator */}
+            <div className="flex flex-col items-center h-full relative w-10">
+               {/* Vertical Line */}
+               <div className="absolute right-4 top-0 h-[380px] w-[2px] bg-[#E5E5E5]">
+                  {/* Active Segment */}
+                  <div className="absolute top-0 left-0 w-full h-[60px] bg-[#70908B]"></div>
+               </div>
+
+               {/* Buttons */}
+               <div className="absolute bottom-0 right-0 flex flex-col gap-4">
+                  <button className="w-10 h-10 rounded-full bg-[#E0EFF6] flex items-center justify-center text-[#07484A] hover:bg-[#d0e6f0] transition-colors">
+                     <ArrowUp size={20} />
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-[#F9D9DA] flex items-center justify-center text-[#07484A] hover:bg-[#f2c6c7] transition-colors">
+                     <ArrowDown size={20} />
+                  </button>
+               </div>
+            </div>
           </div>
 
           {/* Bottom Button */}
-           <div className="mt-20 w-[265px] h-[89px] bg-[#70908B] rounded-[10px] flex items-center justify-center cursor-pointer hover:bg-[#5e7a76] transition-colors">
-              <span className="text-white text-xl font-medium">Help & Support</span>
+           <div className="mt-8 w-[265px] h-[89px] bg-[#70908B] rounded-[10px] flex items-center justify-center cursor-pointer hover:bg-[#5e7a76] transition-colors gap-2">
+              <span className="text-white text-xl font-medium">All Categories</span>
+              <ArrowRight className="text-white w-6 h-6" />
            </div>
         </div>
 
