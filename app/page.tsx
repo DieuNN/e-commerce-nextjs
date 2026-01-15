@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
 import SpecialPackages from './components/SpecialPackages';
 import PopularProducts from './components/PopularProducts';
+import Newsletter from './components/Newsletter';
 import Testimonials from './components/Testimonials';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <CategorySection />
         <SpecialPackages />
         <PopularProducts />
+        <Newsletter />
         <Testimonials />
       </main>
     </div>
