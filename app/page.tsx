@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
+import SpecialPackages from './components/SpecialPackages';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <main>
         <Hero />
         <CategorySection />
+        <SpecialPackages />
       </main>
     </div>
   );
