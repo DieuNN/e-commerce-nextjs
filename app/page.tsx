@@ -6,6 +6,7 @@ import SpecialPackages from './components/SpecialPackages';
 import PopularProducts from './components/PopularProducts';
 import Newsletter from './components/Newsletter';
 import Testimonials from './components/Testimonials';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Newsletter />
         <Testimonials />
       </main>
+      <Footer />
     </div>
   );
 }
