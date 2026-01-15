@@ -12,17 +12,17 @@ const categories = [
 ];
 
 const gridItems = [
-  { id: 1, title: 'Casual', imageColor: 'bg-[#ADADAD]' },
-  { id: 2, title: 'Workspace', imageColor: 'bg-[#D9D9D9]' },
-  { id: 3, title: 'Living Room', imageColor: 'bg-[#D9D9D9]' },
-  { id: 4, title: 'Kitchen', imageColor: 'bg-[#D9D9D9]' },
-  { id: 5, title: 'Bedroom', imageColor: 'bg-[#D9D9D9]' },
-  { id: 6, title: 'Dining', imageColor: 'bg-[#D9D9D9]' },
+  { id: 1, title: 'Casual' },
+  { id: 2, title: 'Workspace' },
+  { id: 3, title: 'Living Room' },
+  { id: 4, title: 'Kitchen' },
+  { id: 5, title: 'Bedroom' },
+  { id: 6, title: 'Dining' },
 ];
 
 export default function CategorySection() {
   return (
-    <section className="hidden lg:block w-full max-w-[1920px] mx-auto px-[150px] py-20">
+    <section className="hidden lg:block w-full max-w-[1920px] mx-auto px-[150px] py-20 bg-white">
       <h2 className="text-[#07484A] font-serif text-[64px] font-normal mb-16 tracking-wide">CATEGORIES</h2>
 
       <div className="flex gap-[60px]">
@@ -80,7 +80,7 @@ export default function CategorySection() {
            {gridItems.map((item) => (
              <div
                 key={item.id}
-                className={`relative rounded-[10px] ${item.imageColor} h-[345px] group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg`}
+                className={`relative rounded-[10px] bg-[#D9D9D9] h-[345px] group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:bg-[#ADADAD]`}
              >
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                    <div className="bg-[#FDFBF8] w-[200px] h-[80px] rounded shadow-sm flex items-center justify-center">
