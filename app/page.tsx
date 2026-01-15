@@ -3,6 +3,10 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
 import OurOwnCreation from './components/OurOwnCreation';
+import SpecialPackages from './components/SpecialPackages';
+import PopularProducts from './components/PopularProducts';
+import Newsletter from './components/Newsletter';
+import Testimonials from './components/Testimonials';
 
 export default function Home() {
   return (
@@ -12,6 +16,10 @@ export default function Home() {
         <Hero />
         <CategorySection />
         <OurOwnCreation />
+        <SpecialPackages />
+        <PopularProducts />
+        <Newsletter />
+        <Testimonials />
       </main>
     </div>
   );
