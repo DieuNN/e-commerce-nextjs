@@ -1,0 +1,14 @@
+
+> e-commerce@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+
+✓ Starting...
+✓ Ready in 1076ms
+○ Compiling / ...
+ GET / 200 in 5.3s (compile: 4.7s, render: 581ms)
+ GET / 200 in 207ms (compile: 6ms, render: 201ms)
+ GET / 200 in 459ms (compile: 12ms, render: 447ms)

@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
 import SpecialPackages from './components/SpecialPackages';
 import PopularProducts from './components/PopularProducts';
+import FeatureSection from './components/FeatureSection';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <CategorySection />
         <SpecialPackages />
         <PopularProducts />
+        <FeatureSection />
       </main>
     </div>
   );
