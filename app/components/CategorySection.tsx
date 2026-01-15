@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, ArrowRight, ArrowUp, ArrowDown } from 'lucide-react';
+import { Search, ArrowRight, ArrowUp, ArrowDown, Menu } from 'lucide-react';
 
 const categories = [
   "Bedroom",
@@ -22,10 +22,12 @@ const gridItems = [
 
 export default function CategorySection() {
   return (
-    <section className="hidden lg:block w-full max-w-[1920px] mx-auto px-10 xl:px-[150px] py-20 bg-white">
-      <h2 className="text-[#07484A] font-serif text-[64px] font-normal lg:text-center xl:text-left mb-10 xl:mb-16 tracking-wide">Explore by Category</h2>
+    <section className="w-full max-w-[1920px] mx-auto px-6 py-10 lg:px-10 xl:px-[150px] lg:py-20 bg-white">
+      {/* Desktop Title */}
+      <h2 className="hidden lg:block text-[#07484A] font-serif text-[64px] font-normal lg:text-center xl:text-left mb-10 xl:mb-16 tracking-wide">Explore by Category</h2>
 
-      <div className="flex flex-col xl:flex-row gap-10 xl:gap-[60px]">
+      {/* Desktop Layout */}
+      <div className="hidden lg:flex flex-col xl:flex-row gap-10 xl:gap-[60px]">
         {/* Sidebar / Top Bar */}
         <div className="w-full xl:w-[350px] flex-shrink-0 flex flex-col gap-8">
           {/* Search */}
@@ -92,6 +94,44 @@ export default function CategorySection() {
                 </div>
              </div>
            ))}
+        </div>
+      </div>
+
+      {/* Mobile Layout */}
+      <div className="block lg:hidden flex flex-col gap-6">
+        {/* Mobile Title */}
+        <h2 className="text-[#07484A] font-serif text-3xl font-bold mb-4">Explore by Category</h2>
+
+        {/* Mobile Search & Menu */}
+        <div className="flex items-center gap-4">
+          <div className="flex-1 h-12 bg-[#F0F0F0] rounded-[6px] flex items-center px-4 gap-3">
+             <Search className="text-[#6E757E] w-5 h-5" />
+             <input
+               type="text"
+               placeholder="Search"
+               className="bg-transparent text-[#6E757E] text-base w-full focus:outline-none"
+             />
+          </div>
+          <button className="p-2">
+            <Menu className="text-[#07484A] w-8 h-8" />
+          </button>
+        </div>
+
+        {/* Mobile Category List */}
+        <div className="flex flex-col gap-4 mt-4">
+          {categories.map((cat, index) => (
+            <div
+              key={index}
+              className="w-full h-[200px] bg-[#ADADAD] rounded-[10px] flex flex-col items-center justify-center relative"
+            >
+              <span className="text-white font-serif text-3xl">{cat}</span>
+              {index === 0 && (
+                <button className="mt-4 bg-[#E0EFF6] text-[#07484A] px-8 py-2 rounded-[4px] text-base font-medium hover:bg-[#d0e6f0] transition-colors">
+                  Explore
+                </button>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
