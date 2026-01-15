@@ -37,7 +37,7 @@ export default function CategorySection() {
           </div>
 
           {/* Categories List & Scroll */}
-          <div className="flex lg:flex-row xl:flex-col lg:justify-center xl:justify-between relative lg:h-auto xl:h-[450px] lg:py-8 xl:py-0">
+          <div className="flex lg:flex-row xl:flex-row lg:justify-center xl:justify-between relative lg:h-auto xl:h-[450px] lg:py-8 xl:py-0">
             <div className="flex lg:flex-row xl:flex-col lg:flex-wrap gap-x-8 gap-y-4 lg:pl-0 xl:pl-4 lg:justify-center xl:justify-start lg:items-center xl:items-start lg:max-w-[700px] lg:mx-auto xl:max-w-none xl:mx-0">
               {categories.map((cat, index) => (
                 <a
@@ -53,7 +53,7 @@ export default function CategorySection() {
             {/* Custom Scroll Indicator (Desktop only) */}
             <div className="hidden xl:flex flex-col items-center h-full relative w-10">
                {/* Vertical Line */}
-               <div className="absolute right-4 top-0 h-[380px] w-[2px] bg-[#E5E5E5]">
+               <div className="absolute right-4 top-0 h-[340px] w-[2px] bg-[#E5E5E5]">
                   {/* Active Segment */}
                   <div className="absolute top-0 left-0 w-full h-[60px] bg-[#70908B]"></div>
                </div>
