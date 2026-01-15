@@ -22,34 +22,34 @@ const gridItems = [
 
 export default function CategorySection() {
   return (
-    <section className="hidden lg:block w-full max-w-[1920px] mx-auto px-[150px] py-20 bg-white">
-      <h2 className="text-[#07484A] font-serif text-[64px] font-normal mb-16 tracking-wide">CATEGORIES</h2>
+    <section className="hidden lg:block w-full max-w-[1920px] mx-auto px-10 xl:px-[150px] py-20 bg-white">
+      <h2 className="text-[#07484A] font-serif text-[64px] font-normal lg:text-center xl:text-left mb-10 xl:mb-16 tracking-wide">Explore by Category</h2>
 
-      <div className="flex gap-[60px]">
-        {/* Sidebar */}
-        <div className="w-[350px] flex-shrink-0 flex flex-col gap-8">
+      <div className="flex flex-col xl:flex-row gap-10 xl:gap-[60px]">
+        {/* Sidebar / Top Bar */}
+        <div className="w-full xl:w-[350px] flex-shrink-0 flex flex-col gap-8">
           {/* Search */}
-          <div className="w-full h-[75px] bg-[#F0F0F0] rounded-[10px] flex items-center px-6 gap-4">
+          <div className="w-full lg:max-w-[463px] xl:max-w-none h-[75px] bg-[#F0F0F0] rounded-[10px] flex items-center px-6 gap-4 mx-auto xl:mx-0">
              <Search className="text-[#6E757E] w-6 h-6" />
              <span className="text-[#6E757E] text-xl font-medium">Search</span>
           </div>
 
           {/* Categories List & Scroll */}
-          <div className="flex flex-row justify-between relative h-[450px]">
-            <div className="flex flex-col gap-8 pl-4">
+          <div className="flex lg:flex-row xl:flex-col lg:justify-center xl:justify-between relative lg:h-auto xl:h-[450px] lg:py-8 xl:py-0">
+            <div className="flex lg:flex-row xl:flex-col lg:flex-wrap gap-x-8 gap-y-4 lg:pl-0 xl:pl-4 lg:justify-center xl:justify-start lg:items-center xl:items-start lg:max-w-[700px] lg:mx-auto xl:max-w-none xl:mx-0">
               {categories.map((cat, index) => (
                 <a
                   key={index}
                   href="#"
-                  className={`text-[#07484A] text-2xl font-normal hover:font-bold transition-all ${cat === 'Bedroom' ? 'font-bold' : ''}`}
+                  className={`text-[#07484A] text-2xl font-normal hover:font-bold transition-all whitespace-nowrap ${cat === 'Bedroom' ? 'font-bold' : ''}`}
                 >
                   {cat}
                 </a>
               ))}
             </div>
 
-            {/* Custom Scroll Indicator */}
-            <div className="flex flex-col items-center h-full relative w-10">
+            {/* Custom Scroll Indicator (Desktop only) */}
+            <div className="hidden xl:flex flex-col items-center h-full relative w-10">
                {/* Vertical Line */}
                <div className="absolute right-4 top-0 h-[380px] w-[2px] bg-[#E5E5E5]">
                   {/* Active Segment */}
@@ -69,18 +69,18 @@ export default function CategorySection() {
           </div>
 
           {/* Bottom Button */}
-           <div className="mt-8 w-[265px] h-[89px] bg-[#70908B] rounded-[10px] flex items-center justify-center cursor-pointer hover:bg-[#5e7a76] transition-colors gap-2">
+           <div className="mt-8 w-[265px] h-[89px] bg-[#70908B] rounded-[10px] flex items-center justify-center cursor-pointer hover:bg-[#5e7a76] transition-colors gap-2 mx-auto xl:mx-0">
               <span className="text-white text-xl font-medium">All Categories</span>
               <ArrowRight className="text-white w-6 h-6" />
            </div>
         </div>
 
         {/* Grid */}
-        <div className="flex-1 grid grid-cols-2 gap-x-[32px] gap-y-[26px]">
+        <div className="flex-1 grid grid-cols-2 lg:gap-5 xl:gap-x-[32px] xl:gap-y-[26px]">
            {gridItems.map((item) => (
              <div
                 key={item.id}
-                className={`relative rounded-[10px] bg-[#D9D9D9] h-[345px] group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:bg-[#ADADAD]`}
+                className={`relative rounded-[10px] bg-[#D9D9D9] lg:h-[277px] xl:h-[345px] group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:bg-[#ADADAD]`}
              >
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                    <div className="bg-[#FDFBF8] w-[200px] h-[80px] rounded shadow-sm flex items-center justify-center">
