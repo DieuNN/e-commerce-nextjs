@@ -80,15 +80,16 @@ export default function CategorySection() {
            {gridItems.map((item, index) => (
              <div
                 key={item.id}
-                className={`relative rounded-[10px] ${item.imageColor} ${item.type === 'featured' ? 'h-[345px]' : 'h-[321px]'} ${index === 1 ? 'mt-[12px]' : ''}`}
+                className={`relative rounded-[10px] ${item.imageColor} ${item.type === 'featured' ? 'h-[345px] group' : 'h-[321px]'} ${index === 1 ? 'mt-[12px]' : ''}`}
              >
                 {item.type === 'featured' && (
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-4">
-                     <div className="bg-[#FDFBF8] w-[200px] h-[80px] rounded shadow-sm flex items-center justify-center">
+                     <div className="bg-[#FDFBF8] w-[200px] h-[80px] rounded shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <span className="text-[#07484A] font-serif text-3xl">{item.title}</span>
                      </div>
-                     <button className="bg-[#E0EFF6] text-[#07484A] px-6 py-3 rounded-full text-lg font-medium flex items-center gap-2 hover:bg-[#d0e6f0] transition-colors">
-                        Shop Now <ArrowRight size={20} />
+                     <button className="bg-[#E0EFF6] text-[#07484A] px-6 py-3 rounded-full text-lg font-medium flex items-center justify-center hover:bg-[#d0e6f0] transition-colors min-w-[160px]">
+                        <span className="group-hover:hidden flex items-center gap-2">Shop Now <ArrowRight size={20} /></span>
+                        <span className="hidden group-hover:block">Explore</span>
                      </button>
                   </div>
                 )}
