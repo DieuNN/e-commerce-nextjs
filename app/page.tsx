@@ -5,6 +5,7 @@ import CategorySection from './components/CategorySection';
 import SpecialPackages from './components/SpecialPackages';
 import PopularProducts from './components/PopularProducts';
 import Newsletter from './components/Newsletter';
+import Testimonials from './components/Testimonials';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <SpecialPackages />
         <PopularProducts />
         <Newsletter />
+        <Testimonials />
       </main>
     </div>
   );

@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Search, ShoppingCart, User, Menu, Armchair, X } from 'lucide-react';
+import Image from 'next/image';
+import { Search, ShoppingCart, User, Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,13 +26,14 @@ export default function Header() {
           </button>
 
           {/* Logo - Always here */}
-          <div className="flex items-center gap-2 font-bold text-2xl tracking-wide">
-            <div className="relative w-8 h-8 flex items-center justify-center">
-               <div className="border-2 border-[#1F4B43] p-0.5 rounded-sm">
-                   <Armchair className="w-5 h-5" strokeWidth={2} />
-               </div>
-            </div>
-            <span className="text-xl md:text-2xl">INWOOD</span>
+          <div className="flex items-center">
+            <Image
+              src="/logo.svg"
+              alt="INWOOD"
+              width={144}
+              height={36}
+              className="h-10 w-auto object-contain"
+            />
           </div>
         </div>
 
@@ -76,13 +78,14 @@ export default function Header() {
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white z-50 flex flex-col p-6 text-[#1F4B43]">
           <div className="flex items-center justify-between mb-8">
-             <div className="flex items-center gap-2 font-bold text-2xl tracking-wide">
-                <div className="relative w-8 h-8 flex items-center justify-center">
-                   <div className="border-2 border-[#1F4B43] p-0.5 rounded-sm">
-                       <Armchair className="w-5 h-5" strokeWidth={2} />
-                   </div>
-                </div>
-                <span className="text-xl md:text-2xl">INWOOD</span>
+             <div className="flex items-center">
+                <Image
+                  src="/logo.svg"
+                  alt="INWOOD"
+                  width={144}
+                  height={36}
+                  className="h-10 w-auto object-contain"
+                />
              </div>
              <button onClick={toggleMenu} aria-label="Close menu">
                <X className="w-8 h-8" />
