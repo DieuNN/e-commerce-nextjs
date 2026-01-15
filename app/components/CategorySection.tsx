@@ -12,12 +12,12 @@ const categories = [
 ];
 
 const gridItems = [
-  { id: 1, type: 'featured', title: 'Casual', imageColor: 'bg-[#ADADAD]' },
-  { id: 2, imageColor: 'bg-[#D9D9D9]' },
-  { id: 3, imageColor: 'bg-[#D9D9D9]' },
-  { id: 4, imageColor: 'bg-[#D9D9D9]' },
-  { id: 5, imageColor: 'bg-[#D9D9D9]' },
-  { id: 6, imageColor: 'bg-[#D9D9D9]' },
+  { id: 1, title: 'Casual', imageColor: 'bg-[#ADADAD]' },
+  { id: 2, title: 'Workspace', imageColor: 'bg-[#D9D9D9]' },
+  { id: 3, title: 'Living Room', imageColor: 'bg-[#D9D9D9]' },
+  { id: 4, title: 'Kitchen', imageColor: 'bg-[#D9D9D9]' },
+  { id: 5, title: 'Bedroom', imageColor: 'bg-[#D9D9D9]' },
+  { id: 6, title: 'Dining', imageColor: 'bg-[#D9D9D9]' },
 ];
 
 export default function CategorySection() {
@@ -82,16 +82,14 @@ export default function CategorySection() {
                 key={item.id}
                 className={`relative rounded-[10px] ${item.imageColor} h-[345px] group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg`}
              >
-                {item.type === 'featured' && (
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                     <div className="bg-[#FDFBF8] w-[200px] h-[80px] rounded shadow-sm flex items-center justify-center">
-                        <span className="text-[#07484A] font-serif text-3xl">{item.title}</span>
-                     </div>
-                     <button className="bg-[#E0EFF6] text-[#07484A] px-6 py-3 rounded-full text-lg font-medium flex items-center justify-center hover:bg-[#d0e6f0] transition-colors min-w-[160px]">
-                        Explore
-                     </button>
-                  </div>
-                )}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="bg-[#FDFBF8] w-[200px] h-[80px] rounded shadow-sm flex items-center justify-center">
+                      <span className="text-[#07484A] font-serif text-3xl">{item.title}</span>
+                   </div>
+                   <button className="bg-[#E0EFF6] text-[#07484A] px-6 py-3 rounded-[6px] text-lg font-medium flex items-center justify-center hover:bg-[#d0e6f0] transition-colors min-w-[160px]">
+                      Explore
+                   </button>
+                </div>
              </div>
            ))}
         </div>
