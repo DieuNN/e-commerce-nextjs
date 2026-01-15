@@ -23,7 +23,7 @@ const gridItems = [
 export default function CategorySection() {
   return (
     <section className="hidden lg:block w-full max-w-[1920px] mx-auto px-10 xl:px-[150px] py-20 bg-white">
-      <h2 className="text-[#07484A] font-serif text-[64px] font-normal lg:text-center xl:text-left mb-10 xl:mb-16 tracking-wide">CATEGORIES</h2>
+      <h2 className="text-[#07484A] font-serif text-[64px] font-normal lg:text-center xl:text-left mb-10 xl:mb-16 tracking-wide">Explore by Category</h2>
 
       <div className="flex flex-col xl:flex-row gap-10 xl:gap-[60px]">
         {/* Sidebar / Top Bar */}
@@ -36,7 +36,7 @@ export default function CategorySection() {
 
           {/* Categories List & Scroll */}
           <div className="flex lg:flex-row xl:flex-col lg:justify-center xl:justify-between relative lg:h-auto xl:h-[450px] lg:py-8 xl:py-0">
-            <div className="flex lg:flex-row xl:flex-col gap-8 lg:pl-0 xl:pl-4 overflow-x-auto lg:items-center xl:items-start">
+            <div className="flex lg:flex-row xl:flex-col lg:flex-wrap gap-x-8 gap-y-4 lg:pl-0 xl:pl-4 lg:justify-center xl:justify-start lg:items-center xl:items-start lg:max-w-[700px] lg:mx-auto xl:max-w-none xl:mx-0">
               {categories.map((cat, index) => (
                 <a
                   key={index}
