@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
+import OurOwnCreation from './components/OurOwnCreation';
 import SpecialPackages from './components/SpecialPackages';
 import PopularProducts from './components/PopularProducts';
 import Newsletter from './components/Newsletter';
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <CategorySection />
+        <OurOwnCreation />
         <SpecialPackages />
         <PopularProducts />
         <Newsletter />
