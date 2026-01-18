@@ -3,9 +3,11 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
 import SpecialPackages from './components/SpecialPackages';
+import StudioDesign from './components/StudioDesign';
 import PopularProducts from './components/PopularProducts';
 import Newsletter from './components/Newsletter';
 import Testimonials from './components/Testimonials';
+import Benefits from './components/Benefits';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -15,10 +17,12 @@ export default function Home() {
       <main>
         <Hero />
         <CategorySection />
-        <SpecialPackages />
         <PopularProducts />
-        <Newsletter />
+        <SpecialPackages />
+        <StudioDesign />
+        <Benefits />
         <Testimonials />
+        <Newsletter />
       </main>
       <Footer />
     </div>

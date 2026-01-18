@@ -4,11 +4,11 @@ import { Facebook, Instagram, Linkedin, Dribbble, Twitter } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="hidden lg:block w-full bg-[#F6F8F8] text-[#1F4B43]">
-      <div className="max-w-[1920px] mx-auto px-[150px] py-[80px]">
-        <div className="grid grid-cols-12 gap-8">
+    <footer className="w-full bg-[#F6F8F8] text-[#1F4B43]" style={{ fontFamily: 'var(--font-open-sans)' }}>
+      <div className="max-w-[1920px] mx-auto p-[40px] xl:px-[150px] xl:py-[80px]">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-8">
           {/* Brand & Address Column - Spans 4 columns */}
-          <div className="col-span-4 flex flex-col">
+          <div className="col-span-2 lg:col-span-4 flex flex-col">
             {/* Logo */}
             <div className="mb-8">
               <Image
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Links Columns - Span 2 columns each */}
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <h3 className="text-xl font-bold mb-8">My Account</h3>
             <ul className="flex flex-col gap-4 text-[#547665]">
               <li><a href="#" className="hover:underline">Sign in</a></li>
@@ -60,7 +60,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <h3 className="text-xl font-bold mb-8">Help</h3>
             <ul className="flex flex-col gap-4 text-[#547665]">
               <li><a href="#" className="hover:underline">Shipping</a></li>
@@ -69,7 +69,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <h3 className="text-xl font-bold mb-8">Shop</h3>
             <ul className="flex flex-col gap-4 text-[#547665]">
               <li><a href="#" className="hover:underline">All Products</a></li>
@@ -78,7 +78,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <h3 className="text-xl font-bold mb-8">Legal Stuff</h3>
             <ul className="flex flex-col gap-4 text-[#547665]">
               <li><a href="#" className="hover:underline">Shipping & Delivery</a></li>
